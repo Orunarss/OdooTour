@@ -1,0 +1,4 @@
+[submodule "ToX82/cookie-bar"]
+	path = ToX82/cookie-bar
+	url = git@github.com:ToX82/cookie-bar.git
+	branch = master
