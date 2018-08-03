@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--Kanban-->
+    <record id="view_kanban_hr_employee_expat_nationality" model="ir.ui.view">
+        <field name="name">hr.employee.view.kanban.inherit.expat.nationality</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+        <field name="arch" type="xml">
+            <xpath expr="//templates" position="before">
+                <field name="country_id"/>
+                <field name="country_image"/>
+            </xpath>
+            <xpath expr="//field[@name='category_ids']" position="after">
+                <span t-if="record.country_id.value">
+                    <img t-att-src="kanban_image('hr.employee', 'country_image', record.id.raw_value)"  style="width:22px;"/>&#160;<field name="country_id"/>
+                </span>
+            </xpath>
+        </field>
+    </record>
+
+    <!--Tree-->
+    <record id="view_tree_hr_employee_expat_nationality" model="ir.ui.view">
+        <field name="name">hr.employee.view.tree.inherit.expat.nationality</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="country_id" string="Nationality"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--Tree-->
+    <record id="view_search_hr_employee_expat_nationality" model="ir.ui.view">
+        <field name="name">hr.employee.view.search.inherit.expat.nationality</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='job_id']" position="after">
+                <field name="country_id"/>
+            </xpath>
+            <xpath expr="//filter[@name='group_company']" position="after">
+                <filter name="group_country" string="Country" domain="[]" context="{'group_by':'country_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--Form-->
+    <record id="view_form_hr_employee_expat_nationality" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.inherit.expat.nationality</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='passport_id']" position="after">
+                <field name="residence_permit"/>
+                <field name="residence_permit_expiry"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>

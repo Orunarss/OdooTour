@@ -1,0 +1,20 @@
+
+#. module: employee_expat_nationality
+#: model:ir.ui.view,arch_db:employee_expat_nationality.view_tree_hr_employee_expat_nationality
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: employee_expat_nationality
+#: model:ir.ui.view,arch_db:employee_expat_nationality.view_search_hr_employee_expat_nationality
+msgid "Country"
+msgstr "دولة"
+
+#. module: employee_expat_nationality
+#: model:ir.model.fields,field_description:employee_expat_nationality.field_hr_employee_residence_permit
+msgid "Residence Permit No"
+msgstr "رقم تصريح الإقامة"
+
+#. module: employee_expat_nationality
+#: model:ir.model.fields,field_description:employee_expat_nationality.field_hr_employee_residence_permit_expiry
+msgid "Permit Expiry"
+msgstr "تاريخ الانتهاء الإقامة"
