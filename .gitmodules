@@ -2,3 +2,8 @@
 	path = OCA/account-financial-tools
 	url = git@github.com:OCA/account-financial-tools.git
 	branch = 10.0
+
+[submodule "account-financial-tools/tree/10.0/account_journal_lock_date"]
+	path = account-financial-tools/tree/10.0/account_journal_lock_date
+	url = git@github.com:OCA/account-financial-tools.git
+	branch = 10.0
